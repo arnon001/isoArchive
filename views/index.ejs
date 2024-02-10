@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Game Archive</title>
+</head>
+<body>
+    <h1>ISO Game Archive W.I.P</h1>
+    <ul>
+        <% isoFiles.forEach(isoFile => { %>
+            <li>
+                <span><%= isoFile %></span>
+                <a href="/download?filename=<%= isoFile %>"><button>Download</button></a>
+            </li>
+        <% }); %>
+    </ul>
+    <h3>Want to add a game? <br> Feel free to send me a message!
+        <br>
+        Discord: <a href="https://discord.com/users/512965766862209025">arnon001</a>
+    </h3>
+</body>
+</html>

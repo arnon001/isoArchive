@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Welcome Admin!</h1>
+    <h2>Ban/Unban IP</h2>
+    <form action="/ban" method="post">
+        <label for="ban-ip">IP Address to Ban:</label>
+        <input type="text" id="ban-ip" name="ip" placeholder="Enter IP address">
+        <button type="submit">Ban</button>
+    </form>
+    <form action="/unban" method="post">
+        <label for="unban-ip">IP Address to Unban:</label>
+        <input type="text" id="unban-ip" name="ip" placeholder="Enter IP address">
+        <button type="submit">Unban</button>
+    </form>
+    <h2>Accessed IP Addresses:</h2>
+    <ul>
+        <% accessedIPs.forEach(ip => { %>
+            <li><%= ip %></li>
+        <% }); %>
+    </ul>
+    <h2>Add ISO</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="iso-file">Select ISO file:</label>
+        <input type="file" id="iso-file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+    <a href="/">Go back to home</a>
+</body>
+</html>
